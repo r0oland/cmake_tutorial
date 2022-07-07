@@ -1,0 +1,10 @@
+# add git ignore for all folders called file
+**/CMakeFiles/
+**/CMakeLists.*
+**/CMakeCache.*
+**/cmake_install.cmake
+*.a
+*.log
+**/install_manifest.txt
+
+Tutorial
