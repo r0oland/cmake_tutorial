@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johannes/Code/cmake_tutorial/cpp_learn/build/CMakeFiles /home/johannes/Code/cmake_tutorial/cpp_learn/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/johannes/Code/cmake_tutorial/cpp_learn/build/CMakeFiles /home/johannes/Code/cmake_tutorial/cpp_learn/build/led/CMakeFiles/progress.marks
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f CMakeFiles/Makefile2 led/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/johannes/Code/cmake_tutorial/cpp_learn/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f CMakeFiles/Makefile2 led/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,71 +143,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f CMakeFiles/Makefile2 led/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f CMakeFiles/Makefile2 led/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Learn
+# Convenience name for target.
+led/CMakeFiles/led.dir/rule:
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f CMakeFiles/Makefile2 led/CMakeFiles/led.dir/rule
+.PHONY : led/CMakeFiles/led.dir/rule
 
-# Build rule for target.
-Learn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Learn
-.PHONY : Learn
+# Convenience name for target.
+led: led/CMakeFiles/led.dir/rule
 
-# fast build rule for target.
-Learn/fast:
-	$(MAKE) -f CMakeFiles/Learn.dir/build.make CMakeFiles/Learn.dir/build
-.PHONY : Learn/fast
-
-#=============================================================================
-# Target rules for targets named led
-
-# Build rule for target.
-led: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 led
 .PHONY : led
 
 # fast build rule for target.
 led/fast:
-	$(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/build
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/build
 .PHONY : led/fast
 
-learn.o: learn.cpp.o
+led.o: led.cpp.o
 
-.PHONY : learn.o
+.PHONY : led.o
 
 # target to build an object file
-learn.cpp.o:
-	$(MAKE) -f CMakeFiles/Learn.dir/build.make CMakeFiles/Learn.dir/learn.cpp.o
-.PHONY : learn.cpp.o
+led.cpp.o:
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/led.cpp.o
+.PHONY : led.cpp.o
 
-learn.i: learn.cpp.i
+led.i: led.cpp.i
 
-.PHONY : learn.i
+.PHONY : led.i
 
 # target to preprocess a source file
-learn.cpp.i:
-	$(MAKE) -f CMakeFiles/Learn.dir/build.make CMakeFiles/Learn.dir/learn.cpp.i
-.PHONY : learn.cpp.i
+led.cpp.i:
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/led.cpp.i
+.PHONY : led.cpp.i
 
-learn.s: learn.cpp.s
+led.s: led.cpp.s
 
-.PHONY : learn.s
+.PHONY : led.s
 
 # target to generate assembly for a file
-learn.cpp.s:
-	$(MAKE) -f CMakeFiles/Learn.dir/build.make CMakeFiles/Learn.dir/learn.cpp.s
-.PHONY : learn.cpp.s
+led.cpp.s:
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/led.cpp.s
+.PHONY : led.cpp.s
 
 # Help Target
 help:
@@ -221,11 +210,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Learn"
 	@echo "... led"
-	@echo "... learn.o"
-	@echo "... learn.i"
-	@echo "... learn.s"
+	@echo "... led.o"
+	@echo "... led.i"
+	@echo "... led.s"
 .PHONY : help
 
 
@@ -237,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/johannes/Code/cmake_tutorial/cpp_learn/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

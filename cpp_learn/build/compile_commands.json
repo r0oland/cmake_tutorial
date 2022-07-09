@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/johannes/Code/cmake_tutorial/cpp_learn/build",
+  "command": "/usr/bin/c++   -I/home/johannes/Code/cmake_tutorial/cpp_learn/build -I/home/johannes/Code/cmake_tutorial/cpp_learn/led  -g   -std=gnu++11 -o CMakeFiles/Learn.dir/learn.cpp.o -c /home/johannes/Code/cmake_tutorial/cpp_learn/learn.cpp",
+  "file": "/home/johannes/Code/cmake_tutorial/cpp_learn/learn.cpp"
+},
+{
+  "directory": "/home/johannes/Code/cmake_tutorial/cpp_learn/build/led",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/led.dir/led.cpp.o -c /home/johannes/Code/cmake_tutorial/cpp_learn/led/led.cpp",
+  "file": "/home/johannes/Code/cmake_tutorial/cpp_learn/led/led.cpp"
+}
+]
